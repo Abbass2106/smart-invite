@@ -1,4 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Admin from "./components/Admin";
 import CreateEvent from "./components/CreateEvent";
 import ViewEvents from "./components/ViewEvents";

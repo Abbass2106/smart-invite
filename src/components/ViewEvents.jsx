@@ -75,9 +75,9 @@ const ViewEvents = () => {
                                         <td>{row.event_id}</td>
                                         <td>{row.host_name}</td>
                                         <td>{row.address}</td>
-                                        <td>
+                                        <td className="d-flex gap-2">
                                             <button
-                                                className="btn btn-primary btn-sm"
+                                                className="btn btn-outline-primary btn-sm"
                                                 onClick={() =>
                                                     navigate("/upload-guests", {
                                                         state: { eventID: row.event_id },
@@ -85,6 +85,17 @@ const ViewEvents = () => {
                                                 }
                                             >
                                                 <FontAwesomeIcon icon={faUpload} /> Upload Guests
+                                            </button>
+
+                                            <button
+                                                className="btn btn-outline-success btn-sm"
+                                                onClick={() =>
+                                                    navigate("/view-guests", {
+                                                        state: { eventID: row.event_id },
+                                                    })
+                                                }
+                                            >
+                                                <FontAwesomeIcon icon={faUpload} /> View Guests
                                             </button>
                                         </td>
                                     </tr>
